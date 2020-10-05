@@ -5,7 +5,7 @@ a = int(input("Enter the number of actions: "))
 
 for roll in range(0, a):
 
-    roll = random.randint(1, 8)
+    roll = random.randint(1, 100)
 
     if roll in range(96, 100) and n < roll:
         print(
