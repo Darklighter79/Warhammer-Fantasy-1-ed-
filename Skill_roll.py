@@ -1,4 +1,4 @@
-#skill test.
+#skill test.....
 import random
 
 n = int(input("Enter your skill value: "))
