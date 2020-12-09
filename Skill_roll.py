@@ -12,7 +12,7 @@ crit_msg = ["Gods are not on your side today",
 
 for i in range(1, a+1):
 
-    roll = random.randint(1, 100)
+    roll = random.randint(96, 100)
 
     if roll in range(96, 101) and n < roll:
         print(
