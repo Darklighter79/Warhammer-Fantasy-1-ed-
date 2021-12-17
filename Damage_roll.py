@@ -1,15 +1,25 @@
-import random
+def damageroll():
 
-n = int(input("Input your strength value with all additional modifiers: "))
-a = int(input("Input your attack value: "))
+    import random
 
-for i in range(1, a+1):
-    roll = random.randint(1, 6)
-    lst_num = [roll]
+    n = int(input("Input your strength value with all additional modifiers: "))
+    a = int(input("Input your attack value: "))
 
-    if roll == 6:
-        while lst_num[-1] == 6:
-            lst_num.append(random.randint(1, 6))
-        print(f'{i}. Fury of Ulric! Additional damage!Your strength total: {n} and your roll is {lst_num}. Total {n + sum(lst_num)}.')
+    for i in range(1, a+1):
+        roll = random.randint(1, 6)
+        lst_num = [roll]
+
+        if roll == 6:
+            while lst_num[-1] == 6:
+                lst_num.append(random.randint(1, 6))
+            print(f'{i}. Fury of Ulric! Additional damage!Your strength total: {n} and your roll is {lst_num}. Total {n + sum(lst_num)}.')
+        else:
+            print(f'{i}. Your strength total: {n} and your roll is {lst_num}. Total {n + sum(lst_num)}.')
+
+    again = input("Again? 'y' to continue  ")
+    if again == "y":
+        damageroll()
     else:
-        print(f'{i}. Your strength total: {n} and your roll is {lst_num}. Total {n + sum(lst_num)}.')
+        print("May the Sigmar guide you")
+
+damageroll()
