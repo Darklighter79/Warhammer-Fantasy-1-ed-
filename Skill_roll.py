@@ -18,7 +18,7 @@ def skillroll():
 
     for i in range(1, a+1):
 
-        roll = random.randint(95, 100)
+        roll = random.randint(01, 100)
 
         if roll in range(96, 101) and n < roll:
             print(
